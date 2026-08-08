@@ -1597,3 +1597,33 @@ p {
 
     line-height: 1.5;
 }
+
+.art-info,
+.featured-info {
+    padding: 14px 4px 4px;
+}
+
+.art-info h3,
+.featured-info h3 {
+    margin-bottom: 5px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-weight: normal;
+    color: #514b68;
+}
+
+.art-info p,
+.featured-info p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: #6d667b;
+}
+
+.art-card {
+    text-align: left;
+}
+
+.featured-card {
+    text-align: left;
+}
