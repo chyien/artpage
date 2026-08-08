@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Art Portfolio">
+
+    <title>Portfolio | Art Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-decoration" aria-hidden="true">
+        <span class="decor-star star-1">✧</span>
+        <span class="decor-star star-2">✧</span>
+        <span class="decor-star star-3">☆</span>
+
+        <span class="decor-flower flower-1">❀</span>
+        <span class="decor-flower flower-2">✿</span>
+
+        <span class="decor-dot dot-1"></span>
+        <span class="decor-dot dot-2"></span>
+        <span class="decor-dot dot-3"></span>
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ART PORTFOLIO
+        </a>
+
+        <button
+            class="menu-toggle"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
+
+        <nav class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="portfolio.html" class="active">
+                Portfolio
+            </a>
+
+            <a href="about.html">About</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PORTFOLIO -->
+
+    <main class="inner-page">
+
+        <header class="page-heading">
+
+            <p class="eyebrow">
+                A COLLECTION OF MY WORK
+            </p>
+
+            <h1>
+                Portfolio
+            </h1>
+
+            <p>
+                A collection of paintings, digital illustrations,
+                and traditional artwork.
+            </p>
+
+        </header>
+
+
+        <!-- PAINTINGS -->
+
+        <section class="art-section">
+
+            <div class="art-section-heading">
+
+                <span class="section-symbol">✧</span>
+
+                <div>
+                    <h2>Paintings</h2>
+
+                    <p>
+                        Color, texture, and painted worlds.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-grid">
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Painting 01">
+
+                    <div class="placeholder-art">
+                        <span>Painting 01</span>
+                    </div>
+
+                </button>
+
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Painting 02">
+
+                    <div class="placeholder-art">
+                        <span>Painting 02</span>
+                    </div>
+
+                </button>
+
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Painting 03">
+
+                    <div class="placeholder-art">
+                        <span>Painting 03</span>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIGITAL ART -->
+
+        <section class="art-section">
+
+            <div class="art-section-heading">
+
+                <span class="section-symbol">❀</span>
+
+                <div>
+                    <h2>Digital Art</h2>
+
+                    <p>
+                        Illustrations, characters, and digital experiments.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-grid">
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Digital Artwork 01">
+
+                    <div class="placeholder-art">
+                        <span>Digital 01</span>
+                    </div>
+
+                </button>
+
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Digital Artwork 02">
+
+                    <div class="placeholder-art">
+                        <span>Digital 02</span>
+                    </div>
+
+                </button>
+
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Digital Artwork 03">
+
+                    <div class="placeholder-art">
+                        <span>Digital 03</span>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRADITIONAL ART -->
+
+        <section class="art-section">
+
+            <div class="art-section-heading">
+
+                <span class="section-symbol">✧</span>
+
+                <div>
+                    <h2>Traditional Art</h2>
+
+                    <p>
+                        Artwork created with physical materials.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="portfolio-grid">
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Traditional Artwork 01">
+
+                    <div class="placeholder-art">
+                        <span>Traditional 01</span>
+                    </div>
+
+                </button>
+
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Traditional Artwork 02">
+
+                    <div class="placeholder-art">
+                        <span>Traditional 02</span>
+                    </div>
+
+                </button>
+
+
+                <button class="art-card"
+                    data-image=""
+                    data-title="Traditional Artwork 03">
+
+                    <div class="placeholder-art">
+                        <span>Traditional 03</span>
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- LIGHTBOX -->
+
+    <div class="lightbox" id="lightbox">
+
+        <button
+            class="lightbox-close"
+            aria-label="Close artwork"
+        >
+            ×
+        </button>
+
+        <div class="lightbox-content">
+
+            <img
+                id="lightbox-image"
+                src=""
+                alt=""
+            >
+
+            <p id="lightbox-title"></p>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>Made with creativity ✧</p>
+
+        <p>© 2026 Art Portfolio</p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
