@@ -1466,3 +1466,45 @@ footer {
     }
 
 }
+
+/* =========================
+   FINAL VISUAL ADJUSTMENTS
+   ========================= */
+
+/* Slightly deeper, softer overall background */
+body {
+    background:
+        linear-gradient(
+            135deg,
+            #f1edf8 0%,
+            #e5e2f2 38%,
+            #e2e9f2 72%,
+            #f0e7f2 100%
+        );
+}
+
+
+/* Darker, slightly larger navigation */
+.nav-links a {
+    font-size: 0.84rem;
+    color: #514b68;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #624f8b;
+}
+
+
+/* Slightly more muted decorations */
+.decor-star {
+    color: rgba(104, 91, 143, 0.52);
+}
+
+.decor-flower {
+    color: rgba(128, 104, 150, 0.38);
+}
+
+.decor-dot {
+    background: rgba(103, 91, 139, 0.4);
+}
