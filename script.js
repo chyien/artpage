@@ -1,118 +1,228 @@
-/* =========================================
+/* =========================================================
    ART PORTFOLIO
-   Interactive features
-   ========================================= */
+   Main JavaScript
+   ========================================================= */
 
 
-/* ---------- MOBILE NAVIGATION ---------- */
+/* =========================
+   MOBILE NAVIGATION
+   ========================= */
 
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
-menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
 
+if (menuToggle && navLinks) {
 
-/* Close mobile menu after clicking a link */
+    menuToggle.addEventListener("click", () => {
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+        const isOpen =
+            navLinks.classList.toggle("active");
 
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
+        menuToggle.setAttribute(
+            "aria-expanded",
+            isOpen
+        );
+
     });
 
-});
+
+    /* Close menu after selecting a page */
+
+    navLinks.querySelectorAll("a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.classList.remove("active");
+
+            menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+        });
+
+    });
+
+}
 
 
-/* ---------- ARTWORK LIGHTBOX ---------- */
+/* =========================
+   ARTWORK LIGHTBOX
+   ========================= */
 
-const artCards = document.querySelectorAll(".art-card");
+const lightbox =
+    document.getElementById("lightbox");
 
-const lightbox = document.querySelector("#lightbox");
-const lightboxImage = document.querySelector("#lightbox-image");
-const lightboxTitle = document.querySelector("#lightbox-title");
-const lightboxClose = document.querySelector(".lightbox-close");
+const lightboxImage =
+    document.getElementById("lightbox-image");
+
+const lightboxTitle =
+    document.getElementById("lightbox-title");
+
+const lightboxClose =
+    document.querySelector(".lightbox-close");
 
 
-artCards.forEach(card => {
+/* Open artwork */
+
+document.querySelectorAll(".art-card").forEach(card => {
 
     card.addEventListener("click", () => {
 
-        const image = card.dataset.image;
-        const title = card.dataset.title;
+        const image =
+            card.getAttribute("data-image");
 
-        lightboxImage.src = image;
-        lightboxImage.alt = title;
-        lightboxTitle.textContent = title;
+        const title =
+            card.getAttribute("data-title");
 
-        lightbox.classList.add("active");
 
-        document.body.style.overflow = "hidden";
+        /* If the artwork has an image */
+
+        if (image && image.trim() !== "") {
+
+            if (lightboxImage) {
+
+                lightboxImage.src = image;
+
+                lightboxImage.alt =
+                    title || "Artwork";
+
+            }
+
+        }
+
+
+        /* Set title */
+
+        if (lightboxTitle) {
+
+            lightboxTitle.textContent =
+                title || "";
+
+        }
+
+
+        /* Show lightbox */
+
+        if (lightbox) {
+
+            lightbox.classList.add("active");
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
     });
 
 });
 
 
-/* Close lightbox */
+/* Close button */
+
+if (lightboxClose) {
+
+    lightboxClose.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+}
+
+
+/* Click outside artwork */
+
+if (lightbox) {
+
+    lightbox.addEventListener("click", event => {
+
+        if (event.target === lightbox) {
+
+            closeLightbox();
+
+        }
+
+    });
+
+}
+
+
+/* Escape key */
+
+document.addEventListener("keydown", event => {
+
+    if (
+        event.key === "Escape" &&
+        lightbox &&
+        lightbox.classList.contains("active")
+    ) {
+
+        closeLightbox();
+
+    }
+
+});
+
+
+/* Close lightbox function */
 
 function closeLightbox() {
+
+    if (!lightbox) return;
 
     lightbox.classList.remove("active");
 
     document.body.style.overflow = "";
 
-    lightboxImage.src = "";
 }
 
 
-lightboxClose.addEventListener("click", closeLightbox);
+/* =========================
+   IMAGE LOADING
+   ========================= */
 
+/*
+   Once real artwork images are added,
+   this makes sure broken image files
+   don't leave ugly empty image boxes.
+*/
 
-/* Click outside artwork to close */
+document.querySelectorAll("img").forEach(image => {
 
-lightbox.addEventListener("click", (event) => {
+    image.addEventListener("error", () => {
 
-    if (event.target === lightbox) {
-        closeLightbox();
-    }
+        image.style.display = "none";
 
-});
-
-
-/* Escape key closes artwork */
-
-document.addEventListener("keydown", (event) => {
-
-    if (event.key === "Escape") {
-        closeLightbox();
-    }
+    });
 
 });
 
 
-/* ---------- SIMPLE SCROLL EFFECT ---------- */
+/* =========================
+   CURRENT PAGE
+   ========================= */
 
-const sections = document.querySelectorAll(".section");
+/*
+   Automatically highlights the
+   current page in the navigation.
+*/
 
-const observer = new IntersectionObserver(
-    entries => {
+const currentPage =
+    window.location.pathname
+        .split("/")
+        .pop() || "index.html";
 
-        entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
-                entry.target.classList.add("visible");
-            }
+document.querySelectorAll(".nav-links a").forEach(link => {
 
-        });
+    const linkPage =
+        link.getAttribute("href");
 
-    },
-    {
-        threshold: 0.1
+    if (linkPage === currentPage) {
+
+        link.classList.add("active");
+
     }
-);
 
-
-sections.forEach(section => {
-    observer.observe(section);
 });
