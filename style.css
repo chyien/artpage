@@ -1471,7 +1471,6 @@ footer {
    SECOND VISUAL ADJUSTMENTS
    ========================= */
 
-/* Slightly deeper, less washed-out background */
 body {
     background:
         linear-gradient(
@@ -1600,7 +1599,7 @@ p {
 
 .art-info,
 .featured-info {
-    padding: 14px 4px 4px;
+    padding: 16px 14px 8px;
 }
 
 .art-info h3,
