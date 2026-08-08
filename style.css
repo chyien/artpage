@@ -1,6 +1,5 @@
 /* =========================================================
    ART PORTFOLIO
-   Dreamy lavender / blue / pastel design
    ========================================================= */
 
 
@@ -31,10 +30,10 @@ body {
     background:
         linear-gradient(
             135deg,
-            #f8f3ff 0%,
-            #eeeaff 38%,
-            #e9f2ff 72%,
-            #f9efff 100%
+            #dfbbed 0%,
+            #cec7f0 38%,
+            #bbd4f2 72%,
+            #bef3f7 100%
         );
 
     overflow-x: hidden;
@@ -120,7 +119,7 @@ body::before {
 }
 
 
-/* individual decorations */
+/* Individual decorations */
 
 .star-1 {
     top: 16%;
@@ -166,7 +165,7 @@ body::before {
 }
 
 
-/* tiny decorative dots */
+/* Tiny decorative dots */
 
 .decor-dot {
     position: absolute;
@@ -196,7 +195,6 @@ body::before {
 
 
 @keyframes gentleFloat {
-
     from {
         transform:
             translateY(0)
@@ -283,9 +281,9 @@ body::before {
         Helvetica,
         sans-serif;
 
-    font-size: 0.78rem;
+    font-size: 0.9rem;
 
-    color: #5d5778;
+    color: #49445d;
 
     transition:
         color 0.25s ease;
@@ -317,7 +315,7 @@ body::before {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #7158aa;
+    color: #5d4b82;
 }
 
 
@@ -354,7 +352,7 @@ body::before {
         Helvetica,
         sans-serif;
 
-    font-size: 0.65rem;
+    font-size: 0.72rem;
 
     font-weight: 500;
 
@@ -378,7 +376,7 @@ h1 {
             5.5rem
         );
 
-    line-height: 0.95;
+    line-height: 1.08;
 
     letter-spacing: -0.04em;
 }
@@ -397,7 +395,7 @@ h2 {
 
 
 p {
-    line-height: 1.75;
+    line-height: 1.8;
 }
 
 
@@ -466,7 +464,9 @@ p {
 
     color: #635d7b;
 
-    font-size: 1rem;
+    font-size: 1.05rem;
+
+    line-height: 1.8;
 }
 
 
@@ -615,10 +615,10 @@ p {
 
 
 /* =========================
-   FEATURED WORK
+   WHAT I CREATE
    ========================= */
 
-.featured {
+.what-i-create {
     width: min(1120px, 88%);
 
     margin:
@@ -655,7 +655,7 @@ p {
 }
 
 
-.featured-grid {
+.create-grid {
     display: grid;
 
     grid-template-columns:
@@ -665,99 +665,76 @@ p {
 }
 
 
-.featured-card {
-    overflow: hidden;
+.create-card {
+    padding: 35px 28px;
 
-    border-radius: 15px;
+    background:
+        rgba(255, 255, 255, 0.5);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.8);
+
+    border-radius: 20px;
 
     box-shadow:
         0 12px 30px
-        rgba(70, 57, 112, 0.1);
+        rgba(70, 57, 112, 0.08);
 
     transition:
-        transform 0.3s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
-.featured-card:hover {
+.create-card:hover {
     transform:
         translateY(-6px);
+
+    box-shadow:
+        0 18px 38px
+        rgba(70, 57, 112, 0.13);
 }
 
 
-.placeholder-art {
-    min-height: 360px;
+.create-symbol {
+    display: block;
 
-    display: flex;
+    margin-bottom: 18px;
 
-    align-items: center;
-    justify-content: center;
+    color: #9078c7;
 
-    color:
-        rgba(70, 58, 105, 0.55);
+    font-size: 1.5rem;
+}
+
+
+.create-card h3 {
+    margin-bottom: 10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.35rem;
+
+    font-weight: normal;
+
+    color: #514b68;
+}
+
+
+.create-card p {
+    color: #6d667b;
 
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    font-size: 0.7rem;
+    font-size: 0.85rem;
 
-    letter-spacing: 0.12em;
-
-    text-transform: uppercase;
-}
-
-
-.art-one {
-    background:
-        linear-gradient(
-            145deg,
-            #ddd2ff,
-            #c7d8ff
-        );
-}
-
-
-.art-two {
-    background:
-        linear-gradient(
-            145deg,
-            #d6e7ff,
-            #efd5f0
-        );
-}
-
-
-.art-three {
-    background:
-        linear-gradient(
-            145deg,
-            #e7d5ff,
-            #cfe6f5
-        );
-}
-
-
-.text-link {
-    display: inline-block;
-
-    margin-top: 25px;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.78rem;
-
-    color: #735ba5;
-
-    border-bottom:
-        1px solid
-        rgba(115, 91, 165, 0.35);
-
-    padding-bottom: 3px;
+    line-height: 1.7;
 }
 
 
@@ -790,7 +767,11 @@ p {
 .page-heading > p:last-child {
     max-width: 580px;
 
-    color: #69627f;
+    color: #625c73;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
 }
 
 
@@ -833,7 +814,9 @@ p {
 .art-section-heading p {
     color: #746d88;
 
-    font-size: 0.85rem;
+    font-size: 0.95rem;
+
+    line-height: 1.7;
 }
 
 
@@ -848,6 +831,8 @@ p {
 
 
 .art-card {
+    height: auto;
+
     border: none;
 
     padding: 0;
@@ -859,6 +844,8 @@ p {
     background: transparent;
 
     cursor: pointer;
+
+    text-align: left;
 
     box-shadow:
         0 12px 30px
@@ -881,7 +868,84 @@ p {
 
 
 .art-card .placeholder-art {
-    min-height: 430px;
+    min-height: 0;
+
+    height: auto;
+
+    margin-bottom: 0;
+}
+
+
+.art-card img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* Artwork descriptions */
+
+.art-card::after {
+    content: attr(data-description);
+
+    display: block;
+
+    padding:
+        12px
+        4px
+        4px;
+
+    color: #686177;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+.art-info {
+    padding:
+        16px
+        14px
+        8px;
+}
+
+
+.art-info h3 {
+    margin-bottom: 5px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 1.15rem;
+
+    font-weight: normal;
+
+    color: #514b68;
+}
+
+
+.art-info p {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.82rem;
+
+    line-height: 1.6;
+
+    color: #6d667b;
 }
 
 
@@ -1026,7 +1090,9 @@ p {
 .coming-soon-card p:not(.eyebrow):not(.small-note) {
     max-width: 470px;
 
-    margin: 0 auto 20px;
+    margin:
+        0 auto
+        20px;
 
     color: #6d6681;
 }
@@ -1267,7 +1333,7 @@ footer {
     }
 
 
-    .featured-grid,
+    .create-grid,
     .portfolio-grid {
         grid-template-columns:
             repeat(2, 1fr);
@@ -1291,10 +1357,8 @@ footer {
 
 
     .contact-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 }
 
 
@@ -1361,7 +1425,7 @@ footer {
 
     .inner-page,
     .home,
-    .featured {
+    .what-i-create {
         width: 88%;
     }
 
@@ -1391,13 +1455,13 @@ footer {
     }
 
 
-    .featured-grid,
+    .create-grid,
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
 
 
-    .featured {
+    .what-i-create {
         margin-bottom: 70px;
     }
 
@@ -1442,8 +1506,6 @@ footer {
     .flower-1 {
         right: 3%;
     }
-
-
 }
 
 
@@ -1464,192 +1526,4 @@ footer {
 
         transition-duration: 0.01ms !important;
     }
-
-}
-
-/* =========================
-   SECOND VISUAL ADJUSTMENTS
-   ========================= */
-
-body {
-    background:
-        linear-gradient(
-            135deg,
-           #dfbbed 0%,
-            #cec7f0 38%,
-           #bbd4f2 72%,
-            #bef3f7 100%
-        );
-}
-
-
-/* Main page headings: larger + more comfortable line height */
-h1 {
-    line-height: 1.08;
-}
-
-
-/* General descriptive text */
-p {
-    line-height: 1.8;
-}
-
-
-/* Navigation */
-.nav-links a {
-    font-size: 0.9rem;
-    color: #49445d;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-    color: #5d4b82;
-}
-
-
-/* Page intro descriptions */
-.page-heading > p:last-child {
-    font-size: 1rem;
-    line-height: 1.8;
-    color: #625c73;
-}
-
-
-/* Home description */
-.home-description {
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-
-/* Portfolio section descriptions */
-.art-section-heading p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-}
-
-
-/* Small eyebrow text */
-.eyebrow {
-    font-size: 0.72rem;
-}
-
-
-/* =========================
-   ARTWORK DESCRIPTIONS
-   ========================= */
-
-.art-card {
-    text-align: left;
-}
-
-
-/* Space underneath artwork */
-.art-card .placeholder-art {
-    margin-bottom: 0;
-}
-
-
-/* Artwork title + description area */
-.art-card::after {
-    content: attr(data-description);
-
-    display: block;
-
-    padding:
-        12px
-        4px
-        4px;
-
-    color: #686177;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.78rem;
-
-    line-height: 1.5;
-}
-
-
-/* Featured artwork descriptions */
-.featured-card::after {
-    content: attr(data-description);
-
-    display: block;
-
-    padding:
-        12px
-        4px
-        4px;
-
-    color: #686177;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    font-size: 0.78rem;
-
-    line-height: 1.5;
-}
-
-.art-info,
-.featured-info {
-    padding: 16px 14px 8px;
-}
-
-.art-info h3,
-.featured-info h3 {
-    margin-bottom: 5px;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.15rem;
-    font-weight: normal;
-    color: #514b68;
-}
-
-.art-info p,
-.featured-info p {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.82rem;
-    line-height: 1.6;
-    color: #6d667b;
-}
-
-.art-card {
-    text-align: left;
-}
-
-.featured-card {
-    text-align: left;
-}
-
-/* =========================
-   NATURAL ARTWORK SIZING
-   ========================= */
-
-.art-card {
-    height: auto;
-}
-
-.art-card .placeholder-art {
-    min-height: 0;
-    height: auto;
-}
-
-.art-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.featured-card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
 }
