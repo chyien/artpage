@@ -1,10 +1,250 @@
 <!DOCTYPE html>
-<html>
-  <title> My Art Profolio</title>
-  <head>
-    <body>
-      <h1>Portfolio</h1>
-      <p>website coming soon</p>
-    </body>
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Art Portfolio">
+    <title>Art Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Dreamy background -->
+    <div class="background">
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+        <div class="orb orb-three"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#home" class="logo">ART PORTFOLIO</a>
+
+        <button class="menu-toggle" aria-label="Open navigation">
+            ☰
+        </button>
+
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#shop">Shop</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="hero section">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">WELCOME TO MY LITTLE CORNER OF THE UNIVERSE</p>
+
+                <h1>
+                    ART<br>
+                    <span>PORTFOLIO</span>
+                </h1>
+
+                <p class="hero-description">
+                    A collection of illustrations, experiments, characters,
+                    and other things that escaped from my sketchbook.
+                </p>
+
+                <a href="#portfolio" class="main-button">
+                    Explore my art ✦
+                </a>
+
+            </div>
+
+            <div class="hero-decoration">
+                <div class="star star-one">✦</div>
+                <div class="star star-two">✧</div>
+                <div class="star star-three">✦</div>
+
+                <div class="planet">
+                    <div class="planet-ring"></div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="section portfolio-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">A COLLECTION OF MY WORK</p>
+                <h2>Portfolio</h2>
+                <p>
+                    A selection of illustrations and artwork.
+                </p>
+            </div>
+
+            <div class="gallery">
+
+                <!-- Replace these placeholder images with your own artwork later -->
+
+                <button class="art-card" data-image="https://placehold.co/800x1000/ddd6fe/312e81?text=Artwork+01" data-title="Artwork 01">
+                    <img src="https://placehold.co/800x1000/ddd6fe/312e81?text=Artwork+01" alt="Artwork 01">
+                    <span>Artwork 01</span>
+                </button>
+
+                <button class="art-card" data-image="https://placehold.co/800x800/c4b5fd/312e81?text=Artwork+02" data-title="Artwork 02">
+                    <img src="https://placehold.co/800x800/c4b5fd/312e81?text=Artwork+02" alt="Artwork 02">
+                    <span>Artwork 02</span>
+                </button>
+
+                <button class="art-card" data-image="https://placehold.co/800x1100/bfdbfe/1e3a8a?text=Artwork+03" data-title="Artwork 03">
+                    <img src="https://placehold.co/800x1100/bfdbfe/1e3a8a?text=Artwork+03" alt="Artwork 03">
+                    <span>Artwork 03</span>
+                </button>
+
+                <button class="art-card" data-image="https://placehold.co/900x900/e9d5ff/581c87?text=Artwork+04" data-title="Artwork 04">
+                    <img src="https://placehold.co/900x900/e9d5ff/581c87?text=Artwork+04" alt="Artwork 04">
+                    <span>Artwork 04</span>
+                </button>
+
+                <button class="art-card" data-image="https://placehold.co/800x1000/c7d2fe/312e81?text=Artwork+05" data-title="Artwork 05">
+                    <img src="https://placehold.co/800x1000/c7d2fe/312e81?text=Artwork+05" alt="Artwork 05">
+                    <span>Artwork 05</span>
+                </button>
+
+                <button class="art-card" data-image="https://placehold.co/800x800/dbeafe/1e3a8a?text=Artwork+06" data-title="Artwork 06">
+                    <img src="https://placehold.co/800x800/dbeafe/1e3a8a?text=Artwork+06" alt="Artwork 06">
+                    <span>Artwork 06</span>
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="section about-section">
+
+            <div class="about-card">
+
+                <div class="about-symbol">
+                    ✦
+                </div>
+
+                <div>
+                    <p class="eyebrow">A LITTLE ABOUT ME</p>
+
+                    <h2>About</h2>
+
+                    <p>
+                        Hi! I'm an artist who enjoys creating illustrations,
+                        characters, and colorful little worlds.
+                    </p>
+
+                    <p>
+                        This portfolio is a place to collect my favorite
+                        pieces, document my creative experiments, and share
+                        what I've been working on.
+                    </p>
+
+                    <p>
+                        More information about me and my work can go here.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SHOP -->
+        <section id="shop" class="section shop-section">
+
+            <div class="shop-card">
+
+                <div class="shop-icon">✧</div>
+
+                <p class="eyebrow">THE SHOP IS STILL MATERIALIZING...</p>
+
+                <h2>Coming Soon</h2>
+
+                <p>
+                    Prints, goodies, and other art-related treasures
+                    will eventually live here.
+                </p>
+
+                <span class="coming-soon">
+                    ✦ STAY TUNED ✦
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact-section">
+
+            <div class="section-heading">
+                <p class="eyebrow">LET'S TALK</p>
+                <h2>Contact</h2>
+
+                <p>
+                    Want to get in touch? Find me here:
+                </p>
+            </div>
+
+            <div class="contact-links">
+
+                <!-- Replace these links with your actual accounts -->
+
+                <a href="#" class="contact-card">
+                    <span>✦</span>
+                    Instagram
+                </a>
+
+                <a href="#" class="contact-card">
+                    <span>✧</span>
+                    Email
+                </a>
+
+                <a href="#" class="contact-card">
+                    <span>✦</span>
+                    Other Socials
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with creativity ✦</p>
+        <p>© 2026 Art Portfolio</p>
+    </footer>
+
+
+    <!-- Artwork lightbox -->
+    <div class="lightbox" id="lightbox">
+
+        <button class="lightbox-close" aria-label="Close artwork">
+            ×
+        </button>
+
+        <div class="lightbox-content">
+            <img id="lightbox-image" src="" alt="">
+            <p id="lightbox-title"></p>
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
 </html>
