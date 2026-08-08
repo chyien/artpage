@@ -1468,43 +1468,132 @@ footer {
 }
 
 /* =========================
-   FINAL VISUAL ADJUSTMENTS
+   SECOND VISUAL ADJUSTMENTS
    ========================= */
 
-/* Slightly deeper, softer overall background */
+/* Slightly deeper, less washed-out background */
 body {
     background:
         linear-gradient(
             135deg,
-            #f1edf8 0%,
-            #e5e2f2 38%,
-            #e2e9f2 72%,
-            #f0e7f2 100%
+            #ebe6f2 0%,
+            #dedceb 38%,
+            #dce4ed 72%,
+            #e9dfe9 100%
         );
 }
 
 
-/* Darker, slightly larger navigation */
+/* Main page headings: larger + more comfortable line height */
+h1 {
+    line-height: 1.08;
+}
+
+
+/* General descriptive text */
+p {
+    line-height: 1.8;
+}
+
+
+/* Navigation */
 .nav-links a {
-    font-size: 0.84rem;
-    color: #514b68;
+    font-size: 0.9rem;
+    color: #49445d;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: #624f8b;
+    color: #5d4b82;
 }
 
 
-/* Slightly more muted decorations */
-.decor-star {
-    color: rgba(104, 91, 143, 0.52);
+/* Page intro descriptions */
+.page-heading > p:last-child {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #625c73;
 }
 
-.decor-flower {
-    color: rgba(128, 104, 150, 0.38);
+
+/* Home description */
+.home-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
 }
 
-.decor-dot {
-    background: rgba(103, 91, 139, 0.4);
+
+/* Portfolio section descriptions */
+.art-section-heading p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* Small eyebrow text */
+.eyebrow {
+    font-size: 0.72rem;
+}
+
+
+/* =========================
+   ARTWORK DESCRIPTIONS
+   ========================= */
+
+.art-card {
+    text-align: left;
+}
+
+
+/* Space underneath artwork */
+.art-card .placeholder-art {
+    margin-bottom: 0;
+}
+
+
+/* Artwork title + description area */
+.art-card::after {
+    content: attr(data-description);
+
+    display: block;
+
+    padding:
+        12px
+        4px
+        4px;
+
+    color: #686177;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
+}
+
+
+/* Featured artwork descriptions */
+.featured-card::after {
+    content: attr(data-description);
+
+    display: block;
+
+    padding:
+        12px
+        4px
+        4px;
+
+    color: #686177;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.78rem;
+
+    line-height: 1.5;
 }
