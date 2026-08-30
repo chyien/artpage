@@ -2,11 +2,6 @@
    ART PORTFOLIO
    ========================================================= */
 
-
-/* =========================
-   RESET
-   ========================= */
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -596,8 +591,18 @@ p {
 
     text-transform: uppercase;
 }
-
-
+/* Homepage artwork */
+.art-placeholder img {
+    display: block;
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+@media (max-width: 650px) {
+    .art-placeholder img {
+        height: 360px;
+    }
+}
 .art-caption {
     margin-top: 18px;
 
