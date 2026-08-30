@@ -1547,3 +1547,9 @@ footer {
         object-fit: cover;
     }
 }
+/* portfolio art
+.art-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
